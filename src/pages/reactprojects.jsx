@@ -7,6 +7,9 @@ import { useState } from "react"
 import { useEffect } from "react"
 import FilterButton from '../images/filter-6535.svg'
 import Footer from "../components/footercomp.jsx"
+import Waver from "../components/waver";
+
+
 
 const ReactProjectsPage = ({ data }) => {
     const [categoryQuery, setCategoryQuery] = useState('');
@@ -34,6 +37,7 @@ const ReactProjectsPage = ({ data }) => {
                     ))}
                 </div>
             </div>
+            <Waver></Waver>
             <Footer></Footer>
         </main>
     )
@@ -42,8 +46,10 @@ export default ReactProjectsPage;
 export function Head () {
     return(
 
-     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-
+<>
+   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+<title>Projects-react</title>
+</>
     )
      
 } 

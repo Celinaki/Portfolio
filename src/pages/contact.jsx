@@ -4,6 +4,7 @@ import Navbar from "../components/navbar"
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import * as contactstyle from "../cssmodules/contact.module.scss"
 import Footer from '../components/footercomp.jsx'
+import Waver from "../components/waver";
 
 
 const contactPage = ({ data }) => {
@@ -22,6 +23,7 @@ const contactPage = ({ data }) => {
                 ))}
 
             </div>
+            <Waver></Waver>
             <Footer></Footer>
         </main>
     )
@@ -32,8 +34,10 @@ export default contactPage
 export function Head () {
     return(
 
-     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-
+<>
+   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+<title>Contact</title>
+</>
     )
      
 } 

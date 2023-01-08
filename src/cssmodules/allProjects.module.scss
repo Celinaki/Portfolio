@@ -13,7 +13,7 @@ $backgroundcolor: rgb(235, 233, 233);
 
     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
     min-height: 100vh;
-padding: 3rem 0rem;
+padding: 3rem 0rem 15rem 0rem;
     h1:first-child {
         // text-align: center;
         margin-left: 10%;
@@ -23,7 +23,6 @@ padding: 3rem 0rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-
     .categories{
         display: flex;
         align-items: flex-end;
@@ -67,11 +66,14 @@ padding: 3rem 0rem;
             height: 2.5rem;
             transform: rotate(90deg);
             transition: transform 300ms ease-in-out;
+            cursor: pointer;
         }
         .nontiltedcategories{
             width: 2.5rem;
             height: 2.5rem;
             transition: transform 300ms ease-in-out;
+            cursor: pointer;
+
         }
     }
 }
@@ -84,7 +86,7 @@ padding: 3rem 0rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     background-color: inherit;
     justify-content: space-between;
 }

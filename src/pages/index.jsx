@@ -48,8 +48,10 @@ export default IndexPage
 export function Head () {
   return(
 
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Mukta+Malar:wght@800&family=Titan+One&family=Ultra&display=swap" rel="stylesheet"></link>
-
+<>
+   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+<title>Home</title>
+</>
   )
    
 } 

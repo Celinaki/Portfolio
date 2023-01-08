@@ -129,6 +129,7 @@
     top: 50%;
     z-index: 2;
     transform: translateY(-50%);
+    transition: 500ms;
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
     border-radius: .25rem;
@@ -155,7 +156,7 @@
 
 @media only screen and (max-width: 1210px) and (min-width:235px) {
     .body {
-        min-height: 150vh;
+        min-height: 100vh;
 
         .projectcard {
             .sidebyside {

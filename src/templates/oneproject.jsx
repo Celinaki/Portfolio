@@ -1,12 +1,12 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql} from "gatsby"
 import Navbar from "../components/navbar"
 import * as singleprojectstyle from "../cssmodules/singleproject.module.scss"
-import Slider from "react-slick";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Footer from '../components/footercomp.jsx'
+import Waver from "../components/waver";
 
 
 
@@ -89,6 +89,7 @@ const OneProjectPage = ({ data }) => {
 
                 </div>
             </div>
+            <Waver></Waver>
             <Footer></Footer>
         </main>
 
@@ -101,8 +102,10 @@ export default OneProjectPage
 export function Head() {
     return (
 
-        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-
+<>
+   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+<title>Project</title>
+</>
     )
 
 }

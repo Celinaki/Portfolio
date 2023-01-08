@@ -7,6 +7,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import FilterButton from '../images/filter-6535.svg'
 import Footer from "../components/footercomp.jsx"
+import Waver from "../components/waver";
 
 
 const VueProjectsPage = ({ data }) => {
@@ -36,6 +37,7 @@ const VueProjectsPage = ({ data }) => {
                     ))}
                 </div>
             </div>
+            <Waver></Waver>
             <Footer></Footer>
         </main>
     )
@@ -44,8 +46,10 @@ export default VueProjectsPage;
 export function Head () {
     return(
 
-     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-
+<>
+   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+<title>Projects-vue</title>
+</>
     )
      
 } 

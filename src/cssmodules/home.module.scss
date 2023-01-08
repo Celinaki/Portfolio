@@ -77,7 +77,10 @@
       }
 
 @media only screen and (max-width: 1210px) and (min-width:235px) {
-    .hero span{
+  .homewrapper{
+    padding-bottom: 10rem;
+  } 
+  .hero span{
         margin-top: 7rem;
     }
     .hero span h1{
@@ -88,11 +91,30 @@
     }
     .hero{
          h2{
-            margin-top: 2rem;
+            margin-top: 15rem;
         font-size: 2em;
         max-width: 80%;
     }
     }
    
+}
+
+//For galaxy fold
+@media only screen and (max-width: 280px) and (min-width:280px) {
+
+  .homewrapper{
+    padding-bottom: 20rem;
+  } 
+
+    .hero span h1{
+        font-size: 3.5em;
+ 
+    }
+    .hero{
+         h2{
+            margin-top: 40%;
+        font-size: 1.5em;
+    }
+    }
 }
 

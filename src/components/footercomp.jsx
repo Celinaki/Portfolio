@@ -13,7 +13,7 @@ const Footercomp = () => {
     }
     `)
     return (
-        <div >
+        <div>
             <footer >
               <span>
                 <p>By {information.contentfulFooter.title}</p>
@@ -21,7 +21,6 @@ const Footercomp = () => {
 </p>
               </span>
               <p>Copyright {information.contentfulFooter.publishedDate}</p> 
-
             </footer>
         </div>
     )
