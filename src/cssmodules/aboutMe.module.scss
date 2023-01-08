@@ -1,0 +1,36 @@
+.body{
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+    background: hsla(302, 82%, 76%,0.3);
+
+    background: linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+
+    background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+
+    background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+    min-height: 100vh;
+padding: 3rem 0rem;
+    .aboutwrapper{
+        width: 80%;
+        margin: auto;
+        p:first-of-type{
+            max-width: 50%;
+        }
+   
+        p,h1{
+            margin: 0rem 0rem 3.9rem 0rem;
+            line-height: 1.5;
+        }
+        ul{
+            list-style-type: ('ღ');
+            padding: 0.2rem 0.9rem;
+            li{
+                padding: 0.2rem 0rem;
+                p{
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+}

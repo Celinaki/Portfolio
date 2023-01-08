@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Italiana', serif;
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background: hsla(302, 82%, 76%, 0.3);
+
+    background: linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+
+    background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+
+    background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+}
+
+.navhome {
+    background: initial;
+
+    a {
+        font-size: 1.5rem;
+        padding: 0.1rem 1rem;
+        border-radius: 2.5px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.11);
+    }
+}
+
+.nav,
+.navhome {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+
+    ul {
+        width: 35%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+ 
+
+
+        li {
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+                font-weight: 700;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2.5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgb(141, 86, 192);
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1210px) and (min-width:235px) {
+
+
+    .nav,
+    .navhome {
+        display: none;
+     
+    }
+
+    .iconholder {
+        position: absolute;
+        // position: fixed;
+        z-index: 99;
+        left: 2%;
+        top: 2%;
+    }
+
+    .hamburgerMenu {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+    .line {
+        width: 70%;
+        height: 8px;
+        background-color: rgb(10, 0, 0);
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform .6s, opacity .8s, top .6s;
+    }
+
+    .barMid {
+        width: 50%;
+        left: 40%;
+        transition: 600ms;
+   
+    }
+
+
+    .barTop {
+        top: 25%;
+    }
+
+    .barBottom {
+        top: 75%;
+    }
+
+    .hamburgerMenu.active .barTop {
+        transform: translate(-50%, -50%) rotate(-315deg);
+        top: 50%;
+    }
+
+    .hamburgerMenu.active .barMid {
+        left: 80%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        opacity: 0;
+    }
+
+    .hamburgerMenu.active .barBottom {
+        transform: translate(-50%, -50%) rotate(-225deg);
+        top: 50%;
+    }
+
+
+    .mobilenavhome {
+        background: inherit;
+
+        ul {
+            height: 95vh;
+
+            width: 100vw;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding-top: 5rem;
+
+            li {
+                font-size: 3em;
+                padding: 3rem 0rem;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    cursor: pointer;
+                    font-weight: 700;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2.5px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgb(141, 86, 192);
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+
+                    }
+                }
+            }
+        }
+    }
+
+ 
+
+    .mobilenav {
+        background: hsla(302, 82%, 76%, 0.3);
+
+        background: linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+
+        background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+
+        background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+
+        min-height: 15vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        overflow-y: hidden;
+        box-sizing: content-box;
+
+
+
+
+        ul {
+            min-height: 100vh;
+            max-height: 100vh;
+            box-sizing: content-box;
+
+            z-index: 98;
+            position: fixed;
+            top: 0;
+            overflow: hidden;
+            background: rgb(236, 191, 235);
+
+            background: linear-gradient(135deg, rgb(175, 161, 207) 100%, hslargb(240, 178, 238));
+
+            background: -moz-linear-gradient(135deg, rgb(173, 161, 202) 100%, hsla(302, 82%, 76%, 1) 0%);
+
+            background: -webkit-linear-gradient(10deg, rgb(185, 174, 212) 0%, rgb(216, 175, 215) 100%);
+
+            width: 100vw;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding-top: 5rem;
+
+            li {
+                font-size: 3em;
+                padding: 3rem 0rem;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    cursor: pointer;
+                    font-weight: 700;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2.5px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgb(141, 86, 192);
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}

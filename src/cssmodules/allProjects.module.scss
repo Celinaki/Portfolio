@@ -1,0 +1,120 @@
+$backgroundcolor: rgb(235, 233, 233);
+
+
+
+
+.body {
+    font-family: 'Italiana', serif;
+    background: hsla(302, 82%, 76%,0.3);
+
+    background: linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+
+    background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+
+    background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+    min-height: 100vh;
+padding: 3rem 0rem;
+    h1:first-child {
+        // text-align: center;
+        margin-left: 10%;
+        margin: 0;
+        margin-left: 10%;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .categories{
+        display: flex;
+        align-items: flex-end;
+        width: 80%;
+        margin: auto;
+        height: 2.5rem;
+        span{
+            margin-left: 2rem;
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                all: unset;
+                cursor: pointer;
+                font-size: 1.5rem;
+                font-weight: 700;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2.5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgb(141, 86, 192);
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+
+        .tiltedcategories{
+            width: 2.5rem;
+            height: 2.5rem;
+            transform: rotate(90deg);
+            transition: transform 300ms ease-in-out;
+        }
+        .nontiltedcategories{
+            width: 2.5rem;
+            height: 2.5rem;
+            transition: transform 300ms ease-in-out;
+        }
+    }
+}
+
+.projectswrapper {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    padding-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: inherit;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1210px) and (min-width:635px){
+ 
+    .categories{
+        span{
+            width: 40% !important;
+        }
+    }
+}
+@media only screen and (max-width: 635px) and (min-width:235px){
+    .categories{
+        align-items: flex-start  !important;
+        width: fit-content;
+        flex-direction: column;
+        height: fit-content !important;
+        span{
+            flex-direction: column;
+            width: 50% !important;       
+            margin: 1rem 0rem 0rem 0rem !important;
+            a{
+                margin: 0.3rem 0rem !important;
+                border-radius: 25px !important;
+                padding: 0.2rem 0.4rem !important;
+                width: fit-content !important;
+                background-color: rgba(0, 110, 255, 0.219) !important;
+            }
+        }
+    }
+}
+
