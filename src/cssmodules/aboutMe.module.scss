@@ -32,17 +32,16 @@
             z-index: 2;
         }
 
-        //Using the image as a background so I wont have to use z-index 
-        .imageholder {
-            background-image: url("../images/eugene-golovesov-ZRJGQuvVHKk-unsplash.jpg");
+        img {
+            // background-image: url("../images/eugene-golovesov-ZRJGQuvVHKk-unsplash.jpg");
             // background-image: url('../images/eugene-golovesov-VJ6aRAcrj-Y-unsplash.jpg');
             width: 65%;
-
             height: 100%;
             position: absolute;
             right: 0;
             top: -5%;
-            background-size: cover;
+            object-fit: cover;
+            // background-size: cover;
             opacity: .25;
             // border-radius: 0% 20%;
             object-position: bottom;
@@ -100,7 +99,7 @@
             .firstp {
                 max-width: 90%;
             }
-            .imageholder{
+            img{
                 top: -2%;
                 height: 110%;
                 width: 100%;
