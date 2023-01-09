@@ -7,20 +7,20 @@ import Footer from '../components/footercomp.jsx'
 import Waver from "../components/waver";
 
 
-const contactPage = ({ data }) => {
+const ContactPage = ({ data }) => {
+
+
   return (
     <main >
       <Navbar></Navbar>
       <div className={contactstyle.contactwrapper}>
-        {data.allContentfulContactPage.edges.map(({ node }) => (
-          <div className={contactstyle.contentwrapper}>
-            <img src={node.profilePicture.url} alt="Person" />
-            <div className={contactstyle.contactgrid}>
-              <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(node.socials)}</section>
-              <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(node.contactInformation)}</section>
-            </div>
+        <div className={contactstyle.contentwrapper}>
+          <img src={data.contentfulContactPage.profilePicture.url} alt="Person" />
+          <div className={contactstyle.contactgrid}>
+            <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(data.contentfulContactPage.socials)}</section>
+            <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(data.contentfulContactPage.contactInformation)}</section>
           </div>
-        ))}
+        </div>
 
       </div>
       <Waver></Waver>
@@ -29,7 +29,7 @@ const contactPage = ({ data }) => {
   )
 }
 
-export default contactPage
+export default ContactPage
 
 export function Head() {
   return (
@@ -45,36 +45,38 @@ export function Head() {
 // GraphQL query
 export const query = graphql`
 query MyContact {
-    allContentfulContactPage {
-      edges {
-        node {
-          contactInformation {
-            raw
-          }
-          socials{
-          raw
-        }
-          profilePicture {
-          url
-          publicUrl
-        }
-        }
-      }
-    }
+   contentfulContactPage {
+    contactInformation {
+           raw
+         }
+         socials{
+         raw
+       }
+         profilePicture {
+         url
+         publicUrl
+       }
   }
+}
 `
-//  query MyQuery {
-//    contentfulContactPage {
-//      profilePicture {
-//        url
-//      }
-//      links {
-//        links
-//      }
-//      contactInformation {
-//        contactInformation
+
+
+
+// query MyContact {
+//   allContentfulContactPage {
+//     edges {
+//       node {
+//         contactInformation {
+//           raw
+//         }
+//         socials{
+//         raw
+//       }
+//         profilePicture {
+//         url
+//         publicUrl
+//       }
+//       }
 //     }
 //   }
-//  }
-
-
+// }

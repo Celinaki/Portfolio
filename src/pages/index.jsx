@@ -8,59 +8,49 @@ import * as homestyle from "../cssmodules/home.module.scss"
 const IndexPage = ({ data }) => {
   return (
     <main >
-      
-      {data.allContentfulStartPage.edges.map(({ node }) => (
-        <div className={homestyle.homewrapper}
+      <div className={homestyle.homewrapper}
         style={{
-          background: `url(${node.heroImage.url}) center`,
+          background: `url(${data.contentfulStartPage.heroImage.url}) center`,
           backgroundSize: "cover",
           width: "100vw", height: "100vh",
-          backgroundPosition:"50% 50%",
+          backgroundPosition: "50% 50%",
           filter: 'contrast(120%)'
           // backgroundRepeat: "no-repeat",
           // backgroundPositionY: "80%"
         }}>
-          <Navbar/>
+        <Navbar />
         <div className={homestyle.hero} style={{
-         
-          width: "100vw", 
-     
+          width: "100vw",
         }}>
-
           <span>
-            <h1>{node.title}</h1>
-            <h1>{node.title}</h1>
+            <h1>{data.contentfulStartPage.title}</h1>
+            <h1>{data.contentfulStartPage.title}</h1>
           </span>
           <article>
-            <h2>{node.presentation.presentation}</h2>
+            <h2>{data.contentfulStartPage.presentation.presentation}</h2>
           </article>
-          
         </div>
-        </div>
-      ))}
-
+      </div>
     </main>
   )
 }
 
 export default IndexPage
 
-export function Head () {
-  return(
+export function Head() {
+  return (
 
-<>
-   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-<title>Home</title>
-</>
+    <>
+      <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+      <title>Home</title>
+    </>
   )
-   
-} 
+
+}
 // GraphQL query
 export const indexPageQuery = graphql`
 query MyQuery {
-  allContentfulStartPage {
-    edges {
-      node {
+  contentfulStartPage {
         title
         heroImage {
           url
@@ -70,6 +60,6 @@ query MyQuery {
         }
       }
     }
-  }
-}
+
 `
+
