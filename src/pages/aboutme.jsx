@@ -40,7 +40,7 @@ export function Head() {
   return (
 
     <>
-      <meta name="description" content="Female junior frontenddeveloper about me"/>
+      <meta name="description" content="Female junior frontenddeveloper contact"/>
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>About me</title>
 
