@@ -8,39 +8,40 @@ import Waver from "../components/waver";
 
 
 const contactPage = ({ data }) => {
-    return (
-        <main >
-            <Navbar></Navbar>
-            <div className={contactstyle.contactwrapper}>
-                {data.allContentfulContactPage.edges.map(({ node }) => (
-                    <div className={contactstyle.contentwrapper}>
-                        <img src={node.profilePicture.url} />
-                        <div className={contactstyle.contactgrid}>
-                            <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(node.socials)}</section>
-                            <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(node.contactInformation)}</section>
-                        </div>
-                    </div>
-                ))}
-
+  return (
+    <main >
+      <Navbar></Navbar>
+      <div className={contactstyle.contactwrapper}>
+        {data.allContentfulContactPage.edges.map(({ node }) => (
+          <div className={contactstyle.contentwrapper}>
+            <img src={node.profilePicture.url} alt="Person" />
+            <div className={contactstyle.contactgrid}>
+              <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(node.socials)}</section>
+              <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(node.contactInformation)}</section>
             </div>
-            <Waver></Waver>
-            <Footer></Footer>
-        </main>
-    )
+          </div>
+        ))}
+
+      </div>
+      <Waver></Waver>
+      <Footer></Footer>
+    </main>
+  )
 }
 
 export default contactPage
 
-export function Head () {
-    return(
+export function Head() {
+  return (
 
-<>
-   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-<title>Contact</title>
-</>
-    )
-     
-} 
+    <>
+      <meta name="description" content="Female junior frontenddeveloper about me" />
+      <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+      <title>Contact</title>
+    </>
+  )
+
+}
 // GraphQL query
 export const query = graphql`
 query MyContact {

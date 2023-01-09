@@ -6,28 +6,27 @@ import * as navstyle from '../cssmodules/navbar.module.scss'
 const Navbar = () => {
     const [home, setHome] = useState(false)
     useEffect(() => {
-        if (window.location.pathname == "/") {
+        if (window.location.pathname === "/") {
             setHome(true)
         }
         else { setHome(false) }
-    })
+    },[])
 
-    const [menu, setMenu] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
 
 
 
     return (
-        <div className={navstyle.navbody}>
+        <div >
             <nav className={home === true ? navstyle.mobilenavhome : navstyle.mobilenav}  >
-                <div className={navstyle.iconholder}>
+                <button className={navstyle.iconholder}>
                     <div className={menuOpen ? `${navstyle.hamburgerMenu} ${navstyle.active}` : navstyle.hamburgerMenu}
                         onClick={() => setMenuOpen(!menuOpen)}>
                         <div className={`${navstyle.line} ${navstyle.barTop}`} ></div>
                         <div className={`${navstyle.line} ${navstyle.barMid}`}></div>
                         <div className={`${navstyle.line} ${navstyle.barBottom}`}></div>
                     </div>
-                </div>
+                </button>
                 {menuOpen ? <ul>
                     <li>
                         <Link to="/">Home</Link>

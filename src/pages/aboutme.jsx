@@ -5,66 +5,64 @@ import Navbar from "../components/navbar"
 import * as aboutmestyle from "../cssmodules/aboutMe.module.scss"
 import Footer from '../components/footercomp.jsx'
 import Waver from "../components/waver";
-import SideImg from "../images/icy.jpg"
+import SideImg from "../images/icy.webp"
 
 
-const aboutMe = ({ data }) => {
+const AboutMe = ({ data }) => {
+
+
   return (
     <main >
       <Navbar></Navbar>
-      {data.allContentfulAboutMe.edges.map(({ node }) => (
-        <div className={aboutmestyle.body}>
-                      <h1>My name is {node.title}</h1>
+      <div className={aboutmestyle.body}>
+        <h1>My name is {data.contentfulAboutMe.title}</h1>
 
-          <div className={aboutmestyle.aboutwrapper}>
-            <p className={aboutmestyle.firstp}>{node.presentation.presentation}</p>
-            <img src={SideImg} alt="Icy pattern" />
-            <span className={aboutmestyle.lists}>
-              <p>My job experiences {renderRichText(node.listOfJobs)}</p>
-              <p>My education {renderRichText(node.listOfEducation)}</p>
+        <div className={aboutmestyle.aboutwrapper}>
+          <p className={aboutmestyle.firstp}>{data.contentfulAboutMe.presentation.presentation}</p>
+          <img src={SideImg} alt="Icy pattern" />
+          <span >
+            <p>My job experiences</p> {renderRichText(data.contentfulAboutMe.listOfJobs)}
+            <p>My education </p>{renderRichText(data.contentfulAboutMe.listOfEducation)}
 
-            </span>
-          </div>
-
+          </span>
         </div>
-      ))}
+
+      </div>
       <Waver></Waver>
       <Footer></Footer>
     </main>
   )
 }
 
-export default aboutMe
+export default AboutMe
 
 export function Head() {
   return (
 
     <>
-    <meta></meta>
+      <meta name="description" content="Female junior frontenddeveloper about me"/>
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>About me</title>
-      
+
     </>
   )
 
 }
-// GraphQL query
-export const aboutQuery = graphql`
+
+//GraphQL query
+
+export const query = graphql`
 query AboutMeQuery {
-  allContentfulAboutMe {
-    edges {
-      node {
-        listOfJobs {
-          raw
-        }
-        listOfEducation {
-          raw
-        }
-        presentation {
-          presentation
-        }
-        title
-      }
+  contentfulAboutMe {
+    title
+    listOfEducation {
+      raw
+    }
+    listOfJobs {
+      raw
+    }
+    presentation {
+      presentation
     }
   }
 }
