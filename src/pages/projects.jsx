@@ -5,7 +5,7 @@ import * as allProjectsstyle from "../cssmodules/allProjects.module.scss"
 import OneProjectCard from "../components/oneProjectCard"
 import { useState } from "react"
 import FilterButton from '../images/filter-6535.svg'
-import Footer from '../components/footercomp.jsx'
+import Footer from '../components/Footercomponent.jsx'
 import Waver from "../components/waver";
 
 

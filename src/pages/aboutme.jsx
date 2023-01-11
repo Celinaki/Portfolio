@@ -3,7 +3,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import * as React from "react"
 import Navbar from "../components/navbar"
 import * as aboutmestyle from "../cssmodules/aboutMe.module.scss"
-import Footer from '../components/footercomp.jsx'
+import Footer from '../components/Footercomponent.jsx'
 import Waver from "../components/waver";
 import SideImg from "../images/icy.webp"
 
