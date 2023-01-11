@@ -8,36 +8,36 @@
     background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
 
     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-    min-height: 115vh;
-    padding: 3rem 0rem;
+    min-height: 125vh;
+    padding: 3rem 0rem 5rem 0rem;
 
     .projectcard {
         width: 80%;
         margin: auto;
         // display: flex;
         justify-content: center;
-        height: 100vh;
-        ul{
+        min-height: 100vh;
+        .imageswrapper{
             display: flex;
-            // flex-direction: column;
-            margin: 0;
-            padding: .5rem 0rem;
-            list-style: none;
-            max-width: 80vw;
-            min-width: 80vw;
-                 min-width: max-content;
-                 min-height: 35vh;
-                 max-height: 35vh;
-            li{
-                padding: 0rem 0.5rem;
-                max-height: 9rem;
+            flex-direction: row;
+            justify-content: space-between;
+            // max-width: 50%;
+            // max-width: 80vw;
+            // min-width: 80vw;
+                //  min-width: max-content;
+                //  min-height: 35vh;
+                //  max-height: 35vh;
+                 flex-wrap: wrap;       
             
             img{
-                width: 100%;
-                height: 100%;
+                max-width:30vw ;
+                // width: 100%;
+                // height: 100%;
+                padding: 2rem 0rem;
+
                 object-fit: contain;
                 object-position: center;
-            }}
+            }
         }
         h1:first-of-type {
             text-align: center;
@@ -46,7 +46,7 @@
         .sidebyside {
             display: flex;
             background-color: inherit;
-            margin-top: 8rem;
+            margin: 8rem 0rem;
 
             p {
                 width: 50%;
@@ -59,7 +59,6 @@
                 display: flex;
                 // align-items: center;
                 justify-content: center;
-
                 h2 {
                     margin: 0 1.5rem 0 0;
                 }
@@ -100,75 +99,7 @@
             }
         }
 
-        // .carouselwrapper {
-        //     margin: auto;
-        //     max-width: 80vw;
-        //     min-width: 80vw;
-        //     min-width: max-content;
-        //     min-height: 35vh;
-        //     max-height: 35vh;
-        //     position: relative;
-        //     display: flex;
-        // }
-
-        // .carousel {
-        //     max-height: 55vh;
-        //     margin: 0;
-        //     padding: 0;
-        //     list-style: none;
-
-        //     .slide {
-        //         position: absolute;
-        //         inset: 0;
-        //         opacity: 0;
-
-                // img {
-                //     display: block;
-                //     width: 100%;
-                //     height: 100%;
-                //     object-fit: contain;
-                //     object-position: center;
-                // }
-    //         }
-
-    //         .slide[data-active] {
-    //             opacity: 1;
-    //         }
-    //     }
      }
-}
-
-.arrowsl,
-.arrowsr {
-    position: absolute;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    z-index: 2;
-    transform: translateY(-50%);
-    transition: 500ms;
-    color: rgba(255, 255, 255, .5);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, .1);
-
-    &:hover {
-        opacity: 1;
-        background-color: rgba(0, 0, 0, .2);
-        color: white;
-    }
-}
-
-.arrowsl {
-    left: 2%;
-    border-radius: 50%;
-}
-
-.arrowsr {
-    right: 2%;
-    border-radius: 50%;
 }
 
 
@@ -177,15 +108,30 @@
         min-height: 100vh;
 
         .projectcard {
+.imageswrapper{
+    box-sizing: border-box;
+    img{
+        max-width:100%;
+        margin: auto;
+        // width: 100%;
+        // height: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding: 2rem 0rem;
+        // margin: 9rem 0rem;
+    }
+}
+
             .sidebyside {
                 margin-top: 2.5rem;
                 flex-direction: column-reverse;
 
                 p {
-                    width: 90%;
+                    width: 100%;
                 }
 
                 span {
+                    justify-content: flex-start;
                     margin-bottom: 2rem;
                     width: 90%;
                 }

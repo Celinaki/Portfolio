@@ -49,22 +49,11 @@ const OneProjectPage = ({ data }) => {
                 <div className={singleprojectstyle.projectcard}>
                     <h1>{project.title}</h1>
 
-                    <div className={singleprojectstyle.carouselwrapper}>
-                      
-                        <ul
-                           
-                            className={singleprojectstyle.carousel} >
-                            <li className={singleprojectstyle.slide}>
-                                <img src={project.image[0].url} alt="" />
-                            </li>
-                            <li className={singleprojectstyle.slide}>
-                                <img src={project.image[1].url} alt="" />
-                            </li>
-                            <li className={singleprojectstyle.slide}>
+                    <section className={singleprojectstyle.imageswrapper}>                                               
+                                <img src={project.image[0].url} alt="" />                                                     
+                                <img src={project.image[1].url} alt="" />                         
                                 <img src={project.image[2].url} alt="" />
-                            </li>
-                        </ul>
-                    </div>
+                    </section>
 
                     <section className={singleprojectstyle.sidebyside}>
                         <p>{project.description.description}</p>
