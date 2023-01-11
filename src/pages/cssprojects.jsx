@@ -48,7 +48,6 @@ export function Head () {
 
 <>
 <meta name="description" content="Female junior frontenddeveloper projects"/>
-
    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
 <title>Projects-css</title>
 </>
@@ -57,7 +56,7 @@ export function Head () {
 } 
 export const cssPageQuery = graphql`
 query MyCssQuery {
-allContentfulProject(filter: {category: {eq: "Css" }}) {
+allContentfulProject(filter: {category: {eq: "React" }}) {
  edges {
    node {
      id
