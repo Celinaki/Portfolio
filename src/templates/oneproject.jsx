@@ -16,30 +16,30 @@ const OneProjectPage = ({ data }) => {
     // const slide = document.querySelector(".slide");
 
     //Image carousel
-    const prevButton = document.getElementById("slide-arrow-prev");
-    const nextButton = document.getElementById("slide-arrow-next");
-    const isBrowser = typeof window !== "undefined"
-    const carouselRef = useRef();
-    const slidesContainer = carouselRef.current;
+    // const prevButton = document.getElementById("slide-arrow-prev");
+    // const nextButton = document.getElementById("slide-arrow-next");
+    // const isBrowser = typeof window !== "undefined"
+     const carouselRef = useRef();
+    // const slidesContainer = carouselRef.current;
 
-    useEffect(() => {
-        const buttons = document.querySelectorAll("[data-carousel-button]")
-        buttons.forEach(button => {
-            button.addEventListener("click", () => {
-                const offset = button.dataset.carouselButton === "next" ? 1 : -1
-                const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
+    // useEffect(() => {
+    //     const buttons = document.querySelectorAll("[data-carousel-button]")
+    //     buttons.forEach(button => {
+    //         button.addEventListener("click", () => {
+    //             const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    //             const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
 
-                const activeSlide = slides.querySelector("[data-active]")
-                let newIndex = [...slides.children].indexOf(activeSlide) + offset
-                if (newIndex < 0) newIndex = slides.children.length - 1
-                if (newIndex >= slides.children.length) newIndex = 0
+    //             const activeSlide = slides.querySelector("[data-active]")
+    //             let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    //             if (newIndex < 0) newIndex = slides.children.length - 1
+    //             if (newIndex >= slides.children.length) newIndex = 0
 
-                slides.children[newIndex].dataset.active = true
-                delete activeSlide.dataset.active
+    //             slides.children[newIndex].dataset.active = true
+    //             delete activeSlide.dataset.active
 
-            })
-        })
-    })
+    //         })
+    //     })
+    // })
     //Image carousel
 
 
@@ -65,12 +65,12 @@ const OneProjectPage = ({ data }) => {
                             <li className={singleprojectstyle.slide} data-active>
                                 <img src={project.image[0].url} alt="" />
                             </li>
-                            <li className={singleprojectstyle.slide}>
+                            {/* <li className={singleprojectstyle.slide}>
                                 <img src={project.image[1].url} alt="" />
                             </li>
                             <li className={singleprojectstyle.slide}>
                                 <img src={project.image[2].url} alt="" />
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
