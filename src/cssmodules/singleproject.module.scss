@@ -19,11 +19,13 @@
         height: 100vh;
         ul{
             display: flex;
-            flex-direction: column;
+            // flex-direction: column;
             margin: 0;
             padding: .5rem 0rem;
+            list-style: none;
             li{
-                padding: .5rem 0rem;
+                padding: 0rem 0.5rem;
+                max-height: 9rem;
             
             img{
                 width: 100%;
