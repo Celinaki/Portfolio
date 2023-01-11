@@ -38,6 +38,7 @@ const ProjectsPage = ({ data }) => {
             <OneProjectCard singleProject={node} key={node.id} />
           ))}
         </div>
+        
       </div>
       <Waver></Waver>
       <Footer></Footer>
@@ -70,6 +71,7 @@ query MyQuery {
         }
         image {
           url
+          
         }
         title
         linkToThePage {

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql} from "gatsby"
+import { graphql } from "gatsby"
 import Navbar from "../components/navbar"
 import * as singleprojectstyle from "../cssmodules/singleproject.module.scss"
 import { useEffect } from "react";
@@ -13,10 +13,11 @@ import Waver from "../components/waver";
 
 const OneProjectPage = ({ data }) => {
     const project = data.contentfulProject;
-    const slide = document.querySelector(".slide");
+    // const slide = document.querySelector(".slide");
+
+    //Image carousel
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-
     const isBrowser = typeof window !== "undefined"
     const carouselRef = useRef();
     const slidesContainer = carouselRef.current;
@@ -36,12 +37,10 @@ const OneProjectPage = ({ data }) => {
                 slides.children[newIndex].dataset.active = true
                 delete activeSlide.dataset.active
 
-
             })
-
-
         })
     })
+    //Image carousel
 
 
     return (
@@ -77,16 +76,13 @@ const OneProjectPage = ({ data }) => {
 
                     <section className={singleprojectstyle.sidebyside}>
                         <p>{project.description.description}</p>
-                        <span> 
-                         <h2>Link to the project</h2>
-                            <button className={singleprojectstyle.buttonlink}> 
-                             {renderRichText(project.linkToThePage)}
+                        <span>
+                            <h2>Link to the project</h2>
+                            <button className={singleprojectstyle.buttonlink}>
+                                {renderRichText(project.linkToThePage)}
                             </button>
-                            </span>
+                        </span>
                     </section>
-
-
-
                 </div>
             </div>
             <Waver></Waver>
@@ -102,16 +98,17 @@ export default OneProjectPage
 export function Head() {
     return (
 
-<>
-   <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-<title>Project</title>
-</>
+        <>
+            <meta name="description" content="Female junior frontenddeveloper project" />
+            <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
+            <title>Project</title>
+        </>
     )
 
 }
 export const query = graphql`
-query SingleProjectQuery($id: String) {
-    contentfulProject(id: {eq: $id}) {
+query SingleProjectQuery($title: String) {
+    contentfulProject(title: {eq: $title}) {
     category
     id
     image {

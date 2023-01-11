@@ -2,11 +2,8 @@
     font-family: 'Italiana', serif;
     font-weight: 600;
     background: hsla(302, 82%, 76%, 0.3);
-
     background: linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-
     background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-
     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
     min-height: 100vh;
     padding: 3rem 0rem 10rem 0rem;
@@ -14,8 +11,6 @@
     h1 {
         margin: 0rem 0rem 3.9rem 10%;
         line-height: 1.5;
-
-
     }
 
     .aboutwrapper {
@@ -73,7 +68,7 @@
             line-height: 1.5;
         }
         span{
-            p{
+             h2{
                 margin: 3rem 0rem 1.1rem 0rem;
 
             }
@@ -100,8 +95,12 @@
     .body {
         .aboutwrapper {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .firstp {
                 max-width: 90%;
+                // margin-left: 5%;
             }
             img{
                 top: -2%;
@@ -109,9 +108,9 @@
                 width: 100%;
                 border-radius: 0 !important;
             }
-            p{
-                max-width: 95%;
-                margin: 1rem ;
+             h2{
+                // max-width: 95%;
+                // margin: 1rem ;
             }
         }
     }

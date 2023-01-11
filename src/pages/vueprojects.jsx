@@ -50,7 +50,6 @@ export function Head() {
 
     <>
       <meta name="description" content="Female junior frontenddeveloper projects" />
-
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>Projects-vue</title>
     </>

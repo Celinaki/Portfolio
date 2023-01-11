@@ -29,7 +29,7 @@ exports.createPages = async ( {graphql,actions}) => {
       allContentfulProject {
         edges {
           node {
-          id
+          title
           }
         }
       }
@@ -37,10 +37,10 @@ exports.createPages = async ( {graphql,actions}) => {
   `)
   data.allContentfulProject.edges.forEach(edge => {
       actions.createPage({
-          path:'/project/' + edge.node.id,
+          path:'/project/' + edge.node.title,
 
           component: path.resolve('./src/templates/oneproject.jsx'),
-          context: { id: edge.node.id }
+          context: { title: edge.node.title }
       })
   });
 }

@@ -21,8 +21,8 @@ const AboutMe = ({ data }) => {
           <p className={aboutmestyle.firstp}>{data.contentfulAboutMe.presentation.presentation}</p>
           <img src={SideImg} alt="Icy pattern" />
           <span >
-            <p>My job experiences</p> {renderRichText(data.contentfulAboutMe.listOfJobs)}
-            <p>My education </p>{renderRichText(data.contentfulAboutMe.listOfEducation)}
+            <h2>My job experiences</h2> {renderRichText(data.contentfulAboutMe.listOfJobs)}
+            <h2>My education </h2>{renderRichText(data.contentfulAboutMe.listOfEducation)}
 
           </span>
         </div>

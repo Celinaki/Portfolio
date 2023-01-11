@@ -7,14 +7,14 @@ const oneProjectCard = ({ singleProject }) => {
     return (
         <article className={projectCardStyle.cardholder}>
             <span className={projectCardStyle.imgtitle}>
-            <img src={singleProject.image[0].url} alt={singleProject.title} width="400px" height="300px"/>
+            <img src={singleProject.image[0].url} alt={singleProject.title}/>
             <h1>{singleProject.title}</h1>
             </span>
             <section className={projectCardStyle.descriptionlinks}>
             <p>{singleProject.description.description.substring(0,350)}.. </p>
             <span>
         {renderRichText(singleProject.linkToThePage) }
-           <Link to = {'/project/'+ singleProject.id} >Read more </Link>
+           <Link to = {'/project/'+ singleProject.title} >{singleProject.title} </Link>
            
             </span>
             </section>

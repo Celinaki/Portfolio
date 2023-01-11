@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Navbar from "../components/navbar"
 import * as homestyle from "../cssmodules/home.module.scss"
 
@@ -41,6 +41,7 @@ export function Head() {
   return (
 
     <>
+    <meta  name="description" content="Female junior frontenddeveloper portfolio"/>
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>Home</title>
     </>

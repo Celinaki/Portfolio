@@ -64,7 +64,7 @@ html {
                     position: absolute;
                     width: 100%;
                     transform: scaleX(0);
-                    height: 2.5px;
+                    height: 2.2px;
                     bottom: 0;
                     left: 0;
                     background-color: rgb(162, 138, 185);
@@ -86,15 +86,16 @@ html {
     display: none;
 }
 
+
+//device<desktop
 @media only screen and (max-width: 1210px) and (min-width:235px) {
-
-
     .nav,
     .navhome {
         display: none;
      
     }
 
+    //Hamburger menu
     .iconholder {
         display: block;
         background-color: inherit;
@@ -104,7 +105,7 @@ html {
         z-index: 99;
         left: 2%;
         top: 2%;
-    }
+    
 
     .hamburgerMenu {
         height: 50px;
@@ -156,15 +157,16 @@ html {
     .hamburgerMenu.active .barBottom {
         transform: translate(-50%, -50%) rotate(-225deg);
         top: 50%;
-    }
+    }}
+    //Hamburger menu
 
 
+    //Nav for when page is on home
     .mobilenavhome {
         background: inherit;
 
         ul {
-            height: 95vh;
-
+            max-height: 95vh;
             width: 100vw;
             margin: auto;
             padding: 0;
@@ -173,7 +175,6 @@ html {
             align-items: center;
             list-style: none;
             padding-top: 5rem;
-
             li {
                 font-size: 3em;
                 padding: 3rem 0rem;
@@ -206,7 +207,8 @@ html {
                 }
             }
         }
-    }
+    }    //Nav for when page is on home
+
 
  
 
@@ -218,35 +220,25 @@ html {
         background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
 
         background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
-
         min-height: 15vh;
         position: relative;
         display: flex;
         align-items: center;
-
         overflow-y: hidden;
         box-sizing: content-box;
-
-
-
 
         ul {
             min-height: 100vh;
             max-height: 100vh;
             box-sizing: content-box;
-
             z-index: 98;
             position: fixed;
             top: 0;
             overflow: hidden;
             background: rgb(236, 191, 235);
-
             background: linear-gradient(135deg, rgb(175, 161, 207) 100%, hslargb(240, 178, 238));
-
             background: -moz-linear-gradient(135deg, rgb(173, 161, 202) 100%, hsla(302, 82%, 76%, 1) 0%);
-
             background: -webkit-linear-gradient(10deg, rgb(185, 174, 212) 0%, rgb(216, 175, 215) 100%);
-
             width: 100vw;
             margin: auto;
             padding: 0;

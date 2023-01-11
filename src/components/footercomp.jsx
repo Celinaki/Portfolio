@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
-import { useEffect } from "react"
 import * as footerstyle from '../cssmodules/footer.module.scss'
 
 const Footercomp = () => {
