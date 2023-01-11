@@ -22,6 +22,15 @@
             flex-direction: column;
             margin: 0;
             padding: .5rem 0rem;
+            li{
+                padding: .5rem 0rem;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }}
         }
         h1:first-of-type {
             text-align: center;
@@ -84,42 +93,42 @@
             }
         }
 
-        .carouselwrapper {
-            margin: auto;
-            max-width: 80vw;
-            min-width: 80vw;
-            min-width: max-content;
-            min-height: 35vh;
-            max-height: 35vh;
-            position: relative;
-            display: flex;
-        }
+        // .carouselwrapper {
+        //     margin: auto;
+        //     max-width: 80vw;
+        //     min-width: 80vw;
+        //     min-width: max-content;
+        //     min-height: 35vh;
+        //     max-height: 35vh;
+        //     position: relative;
+        //     display: flex;
+        // }
 
-        .carousel {
-            max-height: 55vh;
-            margin: 0;
-            padding: 0;
-            list-style: none;
+        // .carousel {
+        //     max-height: 55vh;
+        //     margin: 0;
+        //     padding: 0;
+        //     list-style: none;
 
-            .slide {
-                position: absolute;
-                inset: 0;
-                opacity: 0;
+        //     .slide {
+        //         position: absolute;
+        //         inset: 0;
+        //         opacity: 0;
 
-                img {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    object-position: center;
-                }
-            }
+                // img {
+                //     display: block;
+                //     width: 100%;
+                //     height: 100%;
+                //     object-fit: contain;
+                //     object-position: center;
+                // }
+    //         }
 
-            .slide[data-active] {
-                opacity: 1;
-            }
-        }
-    }
+    //         .slide[data-active] {
+    //             opacity: 1;
+    //         }
+    //     }
+     }
 }
 
 .arrowsl,
