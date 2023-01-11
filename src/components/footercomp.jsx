@@ -2,10 +2,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
 import * as footerstyle from '../cssmodules/footer.module.scss'
 
-const Footercomp = () => {
-
-   
-   const footerinf = useStaticQuery(graphql`
+export default function Footercomp(){
+  
+   const data = useStaticQuery(graphql`
     query MyQuery {
       contentfulFooter {
         quote
@@ -14,17 +13,18 @@ const Footercomp = () => {
       }
     }
     `)
+
     return (
         <div>
             <footer >
               <span>
-                <p>By {footerinf.contentfulFooter.title}</p>
-<p>Favorite quote {footerinf.contentfulFooter.quote}</p>
+                <p>By {data.contentfulFooter.title}</p>
+<p>Favorite quote {data.contentfulFooter.quote}</p>
               </span>
-              <p>Copyright {footerinf.contentfulFooter.publishedDate}</p> 
+              <p>Copyright {data.contentfulFooter.publishedDate}</p> 
             </footer>
         </div>
     )
 }
-export default Footercomp
+
 
