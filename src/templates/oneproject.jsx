@@ -18,8 +18,7 @@ const OneProjectPage = ({ data }) => {
     //Image carousel
     // const prevButton = document.getElementById("slide-arrow-prev");
     // const nextButton = document.getElementById("slide-arrow-next");
-    // const isBrowser = typeof window !== "undefined"
-     const carouselRef = useRef();
+    // const carouselRef = useRef();
     // const slidesContainer = carouselRef.current;
 
     // useEffect(() => {
@@ -50,27 +49,20 @@ const OneProjectPage = ({ data }) => {
                 <div className={singleprojectstyle.projectcard}>
                     <h1>{project.title}</h1>
 
-                    <div className={singleprojectstyle.carouselwrapper} data-carousel>
-                        <button
-                            data-carousel-button="prev"
-
-                            className={singleprojectstyle.arrowsl} id="slide-arrow-prev">&#8656;</button>
-                        <button
-                            data-carousel-button="next"
-                            className={singleprojectstyle.arrowsr} id="slide-arrow-next">&#8658;</button>
+                    <div className={singleprojectstyle.carouselwrapper}>
+                      
                         <ul
-                            data-slides
-                            ref={carouselRef}
-                            className={singleprojectstyle.carousel} id="slides-container">
-                            <li className={singleprojectstyle.slide} data-active>
+                           
+                            className={singleprojectstyle.carousel} >
+                            <li className={singleprojectstyle.slide}>
                                 <img src={project.image[0].url} alt="" />
                             </li>
-                            {/* <li className={singleprojectstyle.slide}>
+                            <li className={singleprojectstyle.slide}>
                                 <img src={project.image[1].url} alt="" />
                             </li>
                             <li className={singleprojectstyle.slide}>
                                 <img src={project.image[2].url} alt="" />
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
 
