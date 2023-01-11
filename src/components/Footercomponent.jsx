@@ -4,15 +4,15 @@ import * as footerstyle from '../cssmodules/footer.module.scss'
 
 export default function Footercomp(){
   
-  //  const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //     contentfulFooter {
-  //       quote
-  //       title
-  //       publishedDate(formatString: "YYYY")
-  //     }
-  //   }
-  //   `)
+   const data = useStaticQuery(graphql`
+    query MyQuery {
+      contentfulFooter {
+        quote
+        title
+        publishedDate(formatString: "YYYY")
+      }
+    }
+    `)
 
     return (
         <div>

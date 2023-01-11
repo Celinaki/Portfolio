@@ -2,10 +2,8 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Navbar from "../components/navbar"
 import * as singleprojectstyle from "../cssmodules/singleproject.module.scss"
-import { useEffect } from "react";
-import { useRef } from "react";
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import Footer from '../components/footercomp.jsx'
+import Footer from '../components/Footercomponent.jsx'
 import Waver from "../components/waver";
 
 
