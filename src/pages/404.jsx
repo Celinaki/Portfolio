@@ -24,7 +24,7 @@ export default NotFoundPage
 export function Head () {
   return(
 <>
-<meta name="description" content="Female junior frontenddeveloper 404-page"/>
+<meta name="description" content="404-page"/>
    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
 <title>404 Not found</title>
 </>

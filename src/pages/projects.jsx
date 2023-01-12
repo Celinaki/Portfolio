@@ -38,7 +38,7 @@ const ProjectsPage = ({ data }) => {
             <OneProjectCard singleProject={node} key={node.id} />
           ))}
         </div>
-        
+
       </div>
       <Waver></Waver>
       <Footer></Footer>
@@ -50,7 +50,8 @@ export function Head() {
   return (
 
     <>
-      <meta name="description" content="Female junior frontenddeveloper projects" />
+      <meta name="description" content="Portfolio projects" />
+      <meta name="keywords" content="HTML, CSS, JavaScript, React, junior frontenddeveloper" />
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>Projects-all</title>
     </>

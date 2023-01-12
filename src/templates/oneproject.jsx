@@ -47,10 +47,10 @@ const OneProjectPage = ({ data }) => {
                 <div className={singleprojectstyle.projectcard}>
                     <h1>{project.title}</h1>
 
-                    <section className={singleprojectstyle.imageswrapper}>                                               
-                                <img src={project.image[0].url} alt="" />                                                     
-                                <img src={project.image[1].url} alt="" />                         
-                                <img src={project.image[2].url} alt="" />
+                    <section className={singleprojectstyle.imageswrapper}>
+                        <img src={project.image[0].url} alt="" />
+                        <img src={project.image[1].url} alt="" />
+                        <img src={project.image[2].url} alt="" />
                     </section>
 
                     <section className={singleprojectstyle.sidebyside}>
@@ -78,7 +78,8 @@ export function Head() {
     return (
 
         <>
-            <meta name="description" content="Female junior frontenddeveloper project" />
+            <meta name="description" content="Portfolio projects" />
+            <meta name="keywords" content="HTML, CSS, JavaScript, React, junior frontenddeveloper" />
             <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
             <title>Project</title>
         </>
