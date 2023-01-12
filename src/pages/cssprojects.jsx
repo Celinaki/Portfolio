@@ -13,8 +13,10 @@ const CssProjectsPage = ({ data }) => {
 
     return (
         <main >
-            <Navbar></Navbar>
-            <div className={allProjectsstyle.body}>
+      <div className={allProjectsstyle.body}>
+<Navbar></Navbar>
+      
+      <div className={allProjectsstyle.wrapper}>
                 <h1>My projects</h1>
                 <section className={allProjectsstyle.categories}>
                   <img src={FilterButton} alt="Filter by"
@@ -36,8 +38,9 @@ const CssProjectsPage = ({ data }) => {
                         <OneProjectCard singleProject={node}  key={node.id}/>
                     ))}
                 </div>
+            <Waver></Waver>               
             </div>
-            <Waver></Waver>
+            </div>
 <Footer></Footer>
         </main>
     )
@@ -48,7 +51,7 @@ export function Head () {
 
 
 <>
-<meta name="description" content="Female junior frontenddeveloper projects"/>
+<meta name="description" content="Junior frontenddeveloper projects"/>
    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
 <title>Projects-css</title>
 </>
@@ -57,7 +60,7 @@ export function Head () {
 } 
 export const cssPageQuery = graphql`
 query MyCssQuery {
-allContentfulProject(filter: {category: {eq: "React" }}) {
+allContentfulProject(filter: {category: {eq: "Css" }}) {
  edges {
    node {
      id

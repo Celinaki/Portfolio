@@ -11,13 +11,14 @@ html {
 }
 
 .nav {
-    background: hsla(302, 82%, 76%, 0.3);
+    background-color: initial;
+    // background: hsla(302, 82%, 76%, 0.3);
 
-    background: linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+    // background: linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
 
-    background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+    // background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
 
-    background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+    // background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
 }
 
 .navhome {
@@ -213,14 +214,14 @@ html {
  
 
     .mobilenav {
-        background: hsla(302, 82%, 76%, 0.3);
+        // background: hsla(302, 82%, 76%, 0.3);
 
-        background: linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+        // background: linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
 
-        background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+        // background: -moz-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
 
-        background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
-        min-height: 15vh;
+        // background: -webkit-linear-gradient(135deg, hsla(258, 40%, 68%, 0.3) 100%, hsla(302, 82%, 76%, 0.3) 0%);
+         min-height: 15vh;
         position: relative;
         display: flex;
         align-items: center;

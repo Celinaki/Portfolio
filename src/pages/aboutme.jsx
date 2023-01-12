@@ -13,22 +13,19 @@ const AboutMe = ({ data }) => {
 
   return (
     <main >
-      <Navbar></Navbar>
       <div className={aboutmestyle.body}>
+      <Navbar></Navbar>
         <h1>My name is {data.contentfulAboutMe.title}</h1>
-
         <div className={aboutmestyle.aboutwrapper}>
           <p className={aboutmestyle.firstp}>{data.contentfulAboutMe.presentation.presentation}</p>
           <img src={SideImg} alt="Icy pattern" />
           <span >
             <h2>My job experiences</h2> {renderRichText(data.contentfulAboutMe.listOfJobs)}
             <h2>My education </h2>{renderRichText(data.contentfulAboutMe.listOfEducation)}
-
           </span>
         </div>
-
+        <Waver></Waver>
       </div>
-      <Waver></Waver>
       <Footer></Footer>
     </main>
   )
@@ -41,7 +38,7 @@ export function Head() {
 
     <>
       <meta name="description" content="Portfolio projects" />
-      <meta name="keywords" content="HTML, CSS, JavaScript, React, junior frontenddeveloper" />  
+      <meta name="keywords" content="HTML, CSS, JavaScript, React, junior frontenddeveloper" />
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>About me</title>
 

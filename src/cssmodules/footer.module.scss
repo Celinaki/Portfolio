@@ -40,17 +40,14 @@ footer{
     }
 }
 .wave{
-    height: 5vh;
-    background: hsla(302, 82%, 76%, 0.3);
-
-    background: hsla(302, 82%, 76%,0.3);
-
-    background: linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
-
-    background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
-
-    background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%); 
+    height: 72vh;
+    // background: hsla(302, 82%, 76%, 0.3);
+    // background: hsla(302, 82%, 76%,0.3);
+    // background: linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+    // background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
+    // background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%); 
          position: relative;
+         background-color: inherit;
 
 }
 .wave::before {   

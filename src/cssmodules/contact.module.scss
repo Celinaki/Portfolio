@@ -1,21 +1,21 @@
-.body {
-    background: hsla(302, 82%, 76%, 0.3);
-    background: linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-    background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-padding: 2rem 0rem 15rem 0rem;
+.contactbody {
+
+     background: hsla(302, 82%, 76%, 0.3);
+     background: linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+     background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
 }
 
 .contactwrapper {
-    background: hsla(302, 82%, 76%, 0.3);
-    background: linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-    background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
-    min-height: 90vh;
+    //background: hsla(302, 82%, 76%, 0.3);
+   // background: linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+    //background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+   // background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+    // min-height: 90vh;
     font-family: 'Italiana', serif;
     font-weight: 800;
+    padding: 3rem 0rem 0rem 0rem;
     min-height: 100vh;
-    padding: 3rem 0rem;
 
 
 

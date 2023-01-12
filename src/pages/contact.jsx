@@ -12,6 +12,7 @@ const ContactPage = ({ data }) => {
 
   return (
     <main >
+      <div className={contactstyle.contactbody}>
       <Navbar></Navbar>
       <div className={contactstyle.contactwrapper}>
         <div className={contactstyle.contentwrapper}>
@@ -21,10 +22,11 @@ const ContactPage = ({ data }) => {
             <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(data.contentfulContactPage.contactInformation)}</section>
           </div>
         </div>
+      <Waver></Waver>
 
       </div>
-      <Waver></Waver>
       <Footer></Footer>
+      </div>
     </main>
   )
 }
@@ -60,24 +62,3 @@ query MyContact {
   }
 }
 `
-
-
-
-// query MyContact {
-//   allContentfulContactPage {
-//     edges {
-//       node {
-//         contactInformation {
-//           raw
-//         }
-//         socials{
-//         raw
-//       }
-//         profilePicture {
-//         url
-//         publicUrl
-//       }
-//       }
-//     }
-//   }
-// }

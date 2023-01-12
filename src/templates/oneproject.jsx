@@ -5,54 +5,36 @@ import * as singleprojectstyle from "../cssmodules/singleproject.module.scss"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Footer from '../components/Footercomponent.jsx'
 import Waver from "../components/waver";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 
 
 const OneProjectPage = ({ data }) => {
     const project = data.contentfulProject;
-    // const slide = document.querySelector(".slide");
 
-    //Image carousel
-    // const prevButton = document.getElementById("slide-arrow-prev");
-    // const nextButton = document.getElementById("slide-arrow-next");
-    // const carouselRef = useRef();
-    // const slidesContainer = carouselRef.current;
-
-    // useEffect(() => {
-    //     const buttons = document.querySelectorAll("[data-carousel-button]")
-    //     buttons.forEach(button => {
-    //         button.addEventListener("click", () => {
-    //             const offset = button.dataset.carouselButton === "next" ? 1 : -1
-    //             const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
-
-    //             const activeSlide = slides.querySelector("[data-active]")
-    //             let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    //             if (newIndex < 0) newIndex = slides.children.length - 1
-    //             if (newIndex >= slides.children.length) newIndex = 0
-
-    //             slides.children[newIndex].dataset.active = true
-    //             delete activeSlide.dataset.active
-
-    //         })
-    //     })
-    // })
-    //Image carousel
-
+const img1=project.image[0].url
+const img2=project.image[1].url
+const img3=project.image[2].url
 
     return (
         <main >
-            <Navbar></Navbar>
+            
             <div className={singleprojectstyle.body}>
+                <Navbar></Navbar>
                 <div className={singleprojectstyle.projectcard}>
                     <h1>{project.title}</h1>
-
-                    <section className={singleprojectstyle.imageswrapper}>
-                        <img src={project.image[0].url} alt="" />
-                        <img src={project.image[1].url} alt="" />
-                        <img src={project.image[2].url} alt="" />
-                    </section>
-
+                    <Carousel>
+                <div>
+                    <img src={img1} />
+                </div>
+                <div>
+                    <img src={img2} />
+                </div>
+                <div>
+                    <img src={img3} />
+                </div>
+            </Carousel>              
                     <section className={singleprojectstyle.sidebyside}>
                         <p>{project.description.description}</p>
                         <span>
@@ -63,8 +45,9 @@ const OneProjectPage = ({ data }) => {
                         </span>
                     </section>
                 </div>
+                            <Waver></Waver>
+
             </div>
-            <Waver></Waver>
             <Footer></Footer>
         </main>
 

@@ -14,8 +14,12 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <main >
-      <Navbar></Navbar>
       <div className={allProjectsstyle.body}>
+<Navbar></Navbar>
+      
+      <div className={allProjectsstyle.wrapper}>
+              
+
         <h1>My projects</h1>
         <section className={allProjectsstyle.categories}>
           <img src={FilterButton} alt=""
@@ -38,9 +42,9 @@ const ProjectsPage = ({ data }) => {
             <OneProjectCard singleProject={node} key={node.id} />
           ))}
         </div>
-
+   <Waver></Waver>
       </div>
-      <Waver></Waver>
+   </div>
       <Footer></Footer>
     </main>
   )
