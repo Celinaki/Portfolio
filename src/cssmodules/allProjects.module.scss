@@ -1,5 +1,7 @@
 $backgroundcolor: rgb(235, 233, 233);
-
+main, .body{
+    overflow: hidden;
+}
 .body{
         font-family: 'Italiana', serif;
     background: hsla(302, 82%, 76%,0.3);
@@ -10,7 +12,7 @@ $backgroundcolor: rgb(235, 233, 233);
 
     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%,0.3) 0%, hsla(258, 40%, 68%,0.3) 100%);
     min-height: 100vh;
-padding: 3rem 0rem 0rem 0rem;
+
 }
 
 
@@ -94,7 +96,7 @@ padding: 3rem 0rem 0rem 0rem;
 }
 
 @media only screen and (max-width: 1210px) and (min-width:635px){
- 
+
     .categories{
         span{
             width: 40% !important;

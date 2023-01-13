@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
         style={{
           background: `url(${data.contentfulStartPage.heroImage.url}) center`,
           backgroundSize: "cover",
-          width: "100vw", height: "120vh",
+          width: "100vw", 
           backgroundPosition: "50% 50%",
           filter: 'contrast(120%)'
           // backgroundRepeat: "no-repeat",

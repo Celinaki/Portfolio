@@ -1,3 +1,6 @@
+.homewrapper{
+  min-height:100vh ;
+}
 .hero{
     font-family: 'Italiana', serif;
 
@@ -78,7 +81,8 @@
 
 @media only screen and (max-width: 1210px) and (min-width:235px) {
   .homewrapper{
-    padding-bottom: 10rem;
+    min-height: max-content;
+    // padding-bottom: 10rem;
   } 
   .hero span{
         margin-top: 7rem;
@@ -94,6 +98,9 @@
             margin-top: 15rem;
         font-size: 2em;
         max-width: 80%;
+    }
+    article{
+      padding-bottom: 5rem;
     }
     }
    

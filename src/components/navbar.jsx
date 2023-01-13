@@ -11,7 +11,7 @@ const Navbar = () => {
             setHome(true)
         }
         else { setHome(false) }
-    },[])
+    }, [])
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -19,8 +19,8 @@ const Navbar = () => {
 
     return (
         <div >
-            <nav className={home === true ? navstyle.mobilenavhome : navstyle.mobilenav}  >
-                <button className={navstyle.iconholder}>
+            <nav className={ navstyle.mobilenav}  >
+                <button className={menuOpen ? `${navstyle.iconholder} ${navstyle.active}` : navstyle.iconholder}>
                     <div className={menuOpen ? `${navstyle.hamburgerMenu} ${navstyle.active}` : navstyle.hamburgerMenu}
                         onClick={() => setMenuOpen(!menuOpen)}
                         onKeyDown={e => e.key === 13 ? setMenuOpen(!menuOpen) : ''}>
@@ -29,23 +29,27 @@ const Navbar = () => {
                         <div className={`${navstyle.line} ${navstyle.barBottom}`}></div>
                     </div>
                 </button>
-                {menuOpen ? <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/projects">Projects</Link>
-                    </li>
-                    <li>
-                        <Link to="/aboutme">About me</Link>
-                    </li>
+                {menuOpen ?
+                    <div className={`${navstyle.menucontent} ${navstyle.active}`}>
+                        <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/projects">Projects</Link>
+                            </li>
+                            <li>
+                                <Link to="/aboutme">About me</Link>
+                            </li>
 
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul> : ''}
-
+                            <li>
+                                <Link to="/contact">Contact</Link>
+                            </li>
+                        </ul>
+                    </div>
+                : ''}
             </nav>
+
 
             <nav className={home === true ? navstyle.navhome : navstyle.nav}  >
                 <ul>
