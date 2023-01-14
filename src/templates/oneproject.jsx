@@ -47,7 +47,8 @@ const OneProjectPage = ({ data }) => {
                         </span>
                     </section>
                 </div>
-                <Waver></Waver>
+  <Waver></Waver>
+              
 
             </div>
             <Footer></Footer>
