@@ -1,127 +1,140 @@
-.homewrapper{
-  min-height:100vh ;
-}
-.hero{
-    font-family: 'Italiana', serif;
-
-    display: flex;
-    flex-direction: column;
-    h2{
-        text-align: center;
-        max-width: 50%;
-        margin: auto;
-        font-size: 2rem;
-        background-color: rgba(255, 255, 255, 0.301);
-        padding: 1rem;
-    }
+.homewrapper {
+  min-height: 100vh;
 }
 
-       .hero span {
-        height: 30vh;
-        position: relative;
-        margin-top: 3rem;
-        display: flex;
-        justify-content: center;
+.hero {
+  font-family: 'Italiana', serif;
 
-    
-    }
-      
-      .hero span h1 {
-        color: #fff;
-        font-size: 6em;
-        position: absolute;
-        font-stretch: 150%;
-        // font-family: 'Titan One', cursive;
-        font-family: 'Mukta Malar', sans-serif;
-        font-weight:800;
+  display: flex;
+  flex-direction: column;
 
-    }
-      
-      .hero span h1:nth-child(1) {
-        color: transparent;
-        -webkit-text-stroke: 2px #07023aa1
-;
-      }
-      
-      .hero span h1:nth-child(2) {
-        color: #120222a1;
-        animation: animate 4s ease-in-out infinite;
-      }
-      
-      @keyframes animate {
-        0%,
-        100% {
-          clip-path: polygon(
-            0% 45%,
-            16% 44%,
-            33% 50%,
-            54% 60%,
-            70% 61%,
-            84% 59%,
-            100% 52%,
-            100% 100%,
-            0% 100%
-          );
-        }
-      
-        50% {
-          clip-path: polygon(
-            0% 60%,
-            15% 65%,
-            34% 66%,
-            51% 62%,
-            67% 50%,
-            84% 45%,
-            100% 46%,
-            100% 100%,
-            0% 100%
-          );
-        }
-      }
+  h2 {
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.301);
+    padding: 1rem;
+  }
+}
+
+.hero span {
+  height: 30vh;
+  position: relative;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.hero span h1 {
+  color: #fff;
+  font-size: 6em;
+  position: absolute;
+  font-stretch: 150%;
+  // font-family: 'Titan One', cursive;
+  font-family: 'Mukta Malar', sans-serif;
+  font-weight: 800;
+
+}
+
+.hero span h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #07023aa1;
+}
+
+.hero span h1:nth-child(2) {
+  color: #120222a1;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%);
+  }
+}
 
 @media only screen and (max-width: 1210px) and (min-width:235px) {
-  .homewrapper{
+  .homewrapper {
     min-height: max-content;
     // padding-bottom: 10rem;
-  } 
-  .hero span{
-        margin-top: 7rem;
+  }
+
+  .hero span {
+    margin-top: 7rem;
+  }
+
+  .hero span h1 {
+    max-width: 80%;
+    font-size: 5em;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .hero {
+    h2 {
+      margin-top: 15rem;
+      font-size: 2em;
+      max-width: 80%;
+
+
     }
-    .hero span h1{
-        max-width: 80%;
-        font-size: 5em;
-        text-align: center;
-        word-wrap: break-word;
-    }
-    .hero{
-         h2{
-            margin-top: 15rem;
-        font-size: 2em;
-        max-width: 80%;
-    }
-    article{
+
+    article {
       padding-bottom: 5rem;
     }
-    }
-   
+  }
+  .hero span h1:nth-child(1) {
+    color:#07023aa1 ;
+    -webkit-text-stroke: 2px #07023aa1;
+  }
+  
+  .hero span h1:nth-child(2) {
+    color: #120222a1;
+  }
+
+
 }
 
 //For galaxy fold
 @media only screen and (max-width: 280px) and (min-width:280px) {
 
-  .homewrapper{
+  .homewrapper {
     padding-bottom: 20rem;
-  } 
+  }
 
-    .hero span h1{
-        font-size: 3.5em;
- 
+  .hero span h1 {
+    font-size: 3.5em;
+
+  }
+
+  .hero {
+    h2 {
+      margin-top: 40%;
+      font-size: 1.5em;
     }
-    .hero{
-         h2{
-            margin-top: 40%;
-        font-size: 1.5em;
-    }
-    }
+  }
 }
-
