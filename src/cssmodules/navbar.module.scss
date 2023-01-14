@@ -98,12 +98,13 @@ html {
         position: absolute;
         // position: fixed;
         z-index: 99;
+        height: 100%;
 
         &.active {
             position: fixed;
         }
         .hamburgerMenu {
-            height: 35px;
+            height: 6vh;
             z-index: 99;
             width: 35px;
             position: relative;
