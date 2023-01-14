@@ -13,28 +13,30 @@ import { Carousel } from 'react-responsive-carousel';
 const OneProjectPage = ({ data }) => {
     const project = data.contentfulProject;
 
-const img1=project.image[0].url
-const img2=project.image[1].url
-const img3=project.image[2].url
+    const img1 = project.image[0].url
+    const img2 = project.image[1].url
+    const img3 = project.image[2].url
 
     return (
         <main >
-            
+
             <div className={singleprojectstyle.body}>
                 <Navbar></Navbar>
                 <div className={singleprojectstyle.projectcard}>
                     <h1>{project.title}</h1>
-                    <Carousel>
-                <div>
-                    <img src={img1} alt="Firs slide"/>
-                </div>
-                <div>
-                    <img src={img2}  alt="Second slide"/>
-                </div>
-                <div>
-                    <img src={img3}  alt="Third slide"/>
-                </div>
-            </Carousel>              
+                    <section>
+                        <Carousel  >
+                            <div>
+                                <img src={img1} alt="Firs slide" />
+                            </div>
+                            <div>
+                                <img src={img2} alt="Second slide" />
+                            </div>
+                            <div>
+                                <img src={img3} alt="Third slide" />
+                            </div>
+                        </Carousel>
+                    </section>
                     <section className={singleprojectstyle.sidebyside}>
                         <p>{project.description.description}</p>
                         <span>
@@ -45,7 +47,7 @@ const img3=project.image[2].url
                         </span>
                     </section>
                 </div>
-                            <Waver></Waver>
+                <Waver></Waver>
 
             </div>
             <Footer></Footer>

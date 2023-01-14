@@ -9,38 +9,25 @@
 
     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
     min-height: 125vh;
-    padding: 3rem 0rem 0rem 0rem;
 
     .projectcard {
+        padding-top: 3rem;
+
         width: 80%;
         margin: auto;
         // display: flex;
         justify-content: center;
-        min-height: 100vh;
-        .imageswrapper{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            // max-width: 50%;
-            // max-width: 80vw;
-            // min-width: 80vw;
-                //  min-width: max-content;
-                //  min-height: 35vh;
-                //  max-height: 35vh;
-                 flex-wrap: wrap;       
-            
-            img{
-                max-width:30vw ;
-                // width: 100%;
-                // height: 100%;
-                padding: 2rem 0rem;
+       height: 80vh;
 
-                object-fit: contain;
-                object-position: center;
-            }
-        }
+       section:first-of-type{
+         
+        margin: auto;
+        width: 60%;
+    }
+     
         h1:first-of-type {
             text-align: center;
+            padding-bottom: 3rem;
         }
 
         .sidebyside {
@@ -108,19 +95,11 @@
         min-height: 100vh;
 
         .projectcard {
-.imageswrapper{
-    box-sizing: border-box;
-    img{
-        max-width:100%;
-        margin: auto;
-        // width: 100%;
-        // height: 100%;
-        object-fit: contain;
-        object-position: center;
-        padding: 2rem 0rem;
-        // margin: 9rem 0rem;
-    }
-}
+            section:first-of-type{
+         
+                margin: auto;
+                width: 100%;
+            }
 
             .sidebyside {
                 margin-top: 2.5rem;

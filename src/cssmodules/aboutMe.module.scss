@@ -6,11 +6,12 @@
     background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
     background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
     min-height: 100vh;
-    padding: 3rem 0rem 0rem 0rem;
 
     h1 {
         margin: 0rem 0rem 3.9rem 10%;
         line-height: 1.5;
+                padding-top: 3rem;
+
     }
 
     .aboutwrapper {
