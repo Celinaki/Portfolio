@@ -26,13 +26,13 @@ const img3=project.image[2].url
                     <h1>{project.title}</h1>
                     <Carousel>
                 <div>
-                    <img src={img1} />
+                    <img src={img1} alt="Firs slide"/>
                 </div>
                 <div>
-                    <img src={img2} />
+                    <img src={img2}  alt="Second slide"/>
                 </div>
                 <div>
-                    <img src={img3} />
+                    <img src={img3}  alt="Third slide"/>
                 </div>
             </Carousel>              
                     <section className={singleprojectstyle.sidebyside}>
