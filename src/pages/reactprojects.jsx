@@ -15,34 +15,35 @@ const ReactProjectsPage = ({ data }) => {
 
   return (
     <main >
-       <div className={allProjectsstyle.body}>
-<Navbar></Navbar>
-      
-      <div className={allProjectsstyle.wrapper}>
-        <h1>My projects</h1>
-        <section className={allProjectsstyle.categories}>
-          <img src={FilterButton} alt=""
-            className={toggleBtn ? allProjectsstyle.tiltedcategories : allProjectsstyle.nontiltedcategories}
-            onClick={e => setToggleBtn(!toggleBtn)}
-            onKeyDown={e => e.key === 13 ? setToggleBtn(!toggleBtn) : ''} />
+      <div className={allProjectsstyle.body}>
+        <Navbar></Navbar>
 
-          {toggleBtn ?
-            <span>
-              <Link to="/reactprojects">React</Link>
-              <Link to="/vueprojects">Vue</Link>
-              <Link to="/cssprojects">Css</Link>
-              <Link to="/projects">Show all</Link>
-            </span>
-            : ''}
+        <div className={allProjectsstyle.wrapper}>
+          <h1>My projects</h1>
+          <section className={allProjectsstyle.categories}>
+            <img src={FilterButton} alt=""
+              className={toggleBtn ? allProjectsstyle.tiltedcategories : allProjectsstyle.nontiltedcategories}
+              onClick={e => setToggleBtn(!toggleBtn)}
+              //Keybinding as "onclick", making it accessible. Toggle cat btn
+              onKeyDown={e => e.key === 13 ? setToggleBtn(!toggleBtn) : ''} />
+            {toggleBtn ?
+              //If btn is true, show categories
+              <span>
+                <Link to="/reactprojects">React</Link>
+                <Link to="/vueprojects">Vue</Link>
+                <Link to="/cssprojects">Css</Link>
+                <Link to="/projects">Show all</Link>
+              </span>
+              : ''}
 
-        </section>
-        <div className={allProjectsstyle.projectswrapper}>
-          {data.allContentfulProject.edges.map(({ node }) => (
-            <OneProjectCard singleProject={node} key={node.id} />
-          ))}
+          </section>
+          <div className={allProjectsstyle.projectswrapper}>
+            {data.allContentfulProject.edges.map(({ node }) => (
+              <OneProjectCard singleProject={node} key={node.id} />
+            ))}
+          </div>
+          <Waver></Waver>
         </div>
-        <Waver></Waver>
-      </div>
       </div>
 
       <Footer></Footer>

@@ -7,28 +7,23 @@ const oneProjectCard = ({ singleProject }) => {
     return (
         <article className={projectCardStyle.cardholder}>
             <span className={projectCardStyle.imgtitle}>
-            <img src={singleProject.image[0].url} alt={singleProject.title}/>
-            <h1>{singleProject.title}</h1>
+                <img src={singleProject.image[0].url} alt={singleProject.title} />
+                <h1>{singleProject.title}</h1>
             </span>
             <section className={projectCardStyle.descriptionlinks}>
-            <p>{singleProject.description.description.substring(0,350)}.. </p>
-            <span>
-        {renderRichText(singleProject.linkToThePage) }
-           <Link to = {'/project/'+ singleProject.title} >{singleProject.title} </Link>
-           
-            </span>
+                <p>{singleProject.description.description.substring(0, 350)}.. </p>
+                <span>
+                    {renderRichText(singleProject.linkToThePage)}
+                    <Link to={'/project/' + singleProject.title} >{singleProject.title} </Link>
+                </span>
             </section>
         </article>
-
+    )
+}
+export function Head() {
+    return (
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
     )
 
 }
-export function Head () {
-    return(
-
-     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
-
-    )
-     
-} 
 export default oneProjectCard

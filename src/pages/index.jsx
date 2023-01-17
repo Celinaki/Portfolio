@@ -14,9 +14,7 @@ const IndexPage = ({ data }) => {
           backgroundSize: "cover",
           width: "100vw", 
           backgroundPosition: "50% 50%",
-          filter: 'contrast(120%)'
-          // backgroundRepeat: "no-repeat",
-          // backgroundPositionY: "80%"
+          filter: 'contrast(120%)'  
         }}>
         <Navbar />
         <div className={homestyle.hero} style={{

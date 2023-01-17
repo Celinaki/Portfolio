@@ -19,7 +19,7 @@ const Navbar = () => {
 
     return (
         <div >
-            <nav className={ navstyle.mobilenav}  >
+            <nav className={navstyle.mobilenav}  >
                 <button className={menuOpen ? `${navstyle.iconholder} ${navstyle.active}` : navstyle.iconholder}>
                     <div className={menuOpen ? `${navstyle.hamburgerMenu} ${navstyle.active}` : navstyle.hamburgerMenu}
                         onClick={() => setMenuOpen(!menuOpen)}
@@ -47,7 +47,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                : ''}
+                    : ''}
             </nav>
 
 

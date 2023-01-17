@@ -23,8 +23,10 @@ const VueProjectsPage = ({ data }) => {
           <img src={FilterButton} alt=""
             className={toggleBtn ? allProjectsstyle.tiltedcategories : allProjectsstyle.nontiltedcategories}
             onClick={e => setToggleBtn(!toggleBtn)}
+          //Keybinding as "onclick", making it accessible. Toggle cat btn
             onKeyDown={e => e.key === 13 ? setToggleBtn(!toggleBtn) : ''} />
           {toggleBtn ?
+           //If btn is true, show categories
             <span>
               <Link to="/reactprojects">React</Link>
               <Link to="/vueprojects">Vue</Link>

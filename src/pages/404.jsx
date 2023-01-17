@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import Navbar from "../components/navbar"
 
@@ -12,6 +13,7 @@ const NotFoundPage = () => {
        padding:"4rem 0rem"
        }}>
 <h1>The page you are looking for seems to not exist or might be broken, try again later!</h1>
+<h2> <Link to="/">Go back home </Link></h2>
 
       </div>
     </main>

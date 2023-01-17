@@ -19,15 +19,14 @@ const OneProjectPage = ({ data }) => {
 
     return (
         <main >
-
             <div className={singleprojectstyle.body}>
                 <Navbar></Navbar>
                 <div className={singleprojectstyle.projectcard}>
                     <h1>{project.title}</h1>
                     <section>
-                        <Carousel  >
+                        <Carousel >
                             <div>
-                                <img src={img1} alt="Firs slide" />
+                                <img src={img1} alt="First slide" />
                             </div>
                             <div>
                                 <img src={img2} alt="Second slide" />
@@ -47,9 +46,7 @@ const OneProjectPage = ({ data }) => {
                         </span>
                     </section>
                 </div>
-  <Waver></Waver>
-              
-
+                <Waver></Waver>
             </div>
             <Footer></Footer>
         </main>

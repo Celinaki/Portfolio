@@ -8,24 +8,22 @@ import Waver from "../components/waver";
 
 
 const ContactPage = ({ data }) => {
-
-
   return (
     <main >
       <div className={contactstyle.contactbody}>
-      <Navbar></Navbar>
-      <div className={contactstyle.contactwrapper}>
-        <div className={contactstyle.contentwrapper}>
-          <img src={data.contentfulContactPage.profilePicture.url} alt="Person" />
-          <div className={contactstyle.contactgrid}>
-            <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(data.contentfulContactPage.socials)}</section>
-            <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(data.contentfulContactPage.contactInformation)}</section>
+        <Navbar></Navbar>
+        <div className={contactstyle.contactwrapper}>
+          <div className={contactstyle.contentwrapper}>
+            <img src={data.contentfulContactPage.profilePicture.url} alt="Person" />
+            <div className={contactstyle.contactgrid}>
+              <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(data.contentfulContactPage.socials)}</section>
+              <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(data.contentfulContactPage.contactInformation)}</section>
+            </div>
           </div>
-        </div>
-      <Waver></Waver>
+          <Waver></Waver>
 
-      </div>
-      <Footer></Footer>
+        </div>
+        <Footer></Footer>
       </div>
     </main>
   )
@@ -37,7 +35,7 @@ export function Head() {
   return (
 
     <>
-      <meta name="description" content="Portfolio projects" />
+      <meta name="description" content="Contact" />
       <meta name="keywords" content="HTML, CSS, JavaScript, React, junior frontenddeveloper" />
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>Contact</title>

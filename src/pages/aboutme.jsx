@@ -9,12 +9,10 @@ import SideImg from "../images/icy.webp"
 
 
 const AboutMe = ({ data }) => {
-
-
   return (
     <main >
       <div className={aboutmestyle.body}>
-      <Navbar></Navbar>
+        <Navbar></Navbar>
         <h1>My name is {data.contentfulAboutMe.title}</h1>
         <div className={aboutmestyle.aboutwrapper}>
           <p className={aboutmestyle.firstp}>{data.contentfulAboutMe.presentation.presentation}</p>
@@ -37,7 +35,7 @@ export function Head() {
   return (
 
     <>
-      <meta name="description" content="Portfolio projects" />
+      <meta name="description" content="About me" />
       <meta name="keywords" content="HTML, CSS, JavaScript, React, junior frontenddeveloper" />
       <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"></link>
       <title>About me</title>
