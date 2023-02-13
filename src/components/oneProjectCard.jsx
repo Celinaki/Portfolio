@@ -13,8 +13,7 @@ const oneProjectCard = ({ singleProject }) => {
             <section className={projectCardStyle.descriptionlinks}>
                 <p>{singleProject.description.description.substring(0, 350)}.. </p>
                 <span>
-                    {renderRichText(singleProject.linkToThePage)}
-                    <Link to={'/project/' + singleProject.title} >{singleProject.title} </Link>
+                    <Link to={'/project/' + singleProject.title} >Show more </Link>
                 </span>
             </section>
         </article>
