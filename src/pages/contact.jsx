@@ -5,6 +5,9 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import * as contactstyle from "../cssmodules/contact.module.scss"
 import Footer from '../components/Footercomponent.jsx'
 import Waver from "../components/waver";
+import PhoneIcon from '../images/phone.svg'
+import LocationIcon from '../images/location.svg'
+import MailIcon from '../images/mail.svg'
 
 
 const ContactPage = ({ data }) => {
@@ -17,7 +20,17 @@ const ContactPage = ({ data }) => {
             <img src={data.contentfulContactPage.profilePicture.url} alt="Person" />
             <div className={contactstyle.contactgrid}>
               <section className={contactstyle.grid1}><h1>My socials</h1>{renderRichText(data.contentfulContactPage.socials)}</section>
-              <section className={contactstyle.grid2}><h1>My contactinformation</h1>{renderRichText(data.contentfulContactPage.contactInformation)}</section>
+              <section className={contactstyle.grid2}>
+                <h1>My contact information</h1>
+                <ul className={contactstyle.contactinfo}>
+                  <li> <img src={PhoneIcon} alt="" /> Phone number: {data.contentfulContactPage.telephoneNumber}</li>
+                                    <li> <img src={LocationIcon} alt="" /> You can find me in: {data.contentfulContactPage.adress}</li>
+
+                  <li> <img src={MailIcon} alt="" /> Email: {data.contentfulContactPage.email}</li>
+
+
+                </ul>
+              </section>
             </div>
           </div>
           <Waver></Waver>
@@ -57,6 +70,9 @@ query MyContact {
          url
          publicUrl
        }
+       email
+       adress
+       telephoneNumber
   }
 }
 `

@@ -20,9 +20,8 @@ main, .body{
 
     h1:first-child {
         // text-align: center;
-        margin-left: 10%;
         margin: 0;
-        margin-left: 10%;
+        margin-left: 14%;
 
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -30,7 +29,7 @@ main, .body{
     .categories{
         display: flex;
         align-items: flex-end;
-        width: 80%;
+        width: 72%;
         margin: auto;
         height: 2.5rem;
         span{
@@ -90,7 +89,7 @@ main, .body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 6rem;
     background-color: inherit;
     justify-content: space-between;
 }
