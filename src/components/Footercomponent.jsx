@@ -17,11 +17,8 @@ export default function Footercomp() {
   return (
     <div>
       <footer >
-        <span>
-          <p>By {data.contentfulFooter.title}</p>
-          <p>Favorite movie quote {data.contentfulFooter.quote}</p>
-        </span>
-        <p style={{color:"gray"}}>Copyright {data.contentfulFooter.publishedDate}</p>
+    
+        <p style={{color:"gray"}}>Copyright {data.contentfulFooter.title} {data.contentfulFooter.publishedDate}</p>
       </footer>
     </div>
   )

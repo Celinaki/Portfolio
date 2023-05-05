@@ -24,7 +24,7 @@ const ContactPage = ({ data }) => {
                 <h1>My contact information</h1>
                 <ul className={contactstyle.contactinfo}>
                   <li> <img src={PhoneIcon} alt="" /> Phone number: {data.contentfulContactPage.telephoneNumber}</li>
-                                    <li> <img src={LocationIcon} alt="" /> You can find me in: {data.contentfulContactPage.adress}</li>
+                      <li> <img src={LocationIcon} alt="" /> Located in  {data.contentfulContactPage.adress}</li>
 
                   <li> <img src={MailIcon} alt="" /> Email: {data.contentfulContactPage.email}</li>
 
